@@ -1,0 +1,169 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  /* font-family: 'DM Sans', sans-serif; */
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: none;
+  overflow-y: hidden;
+}
+#webgi-canvas {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+#webgi-canvas-container{
+  width: 100vw;
+  height: 100vh;
+  /* margin: 10vh 10vw; */
+  border-radius: 0.5rem;
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+/* Bottom bar */
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 2%;
+  bottom: 1%;
+  right: 2%;
+  background-color: rgba(44, 44, 44, 0.8); /* Background with reduced opacity */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 20px; /* Increased padding for more height */
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+  height: 3%;
+  z-index: 1000;
+  font-family: 'DM Sans', sans-serif;
+  border-radius: 0.5rem;
+}
+
+.bottom-bar .logo-icons {
+  display: flex;
+  align-items: center;
+}
+
+.bottom-bar .logo {
+  width: 50px; /* Set the width of the logo */
+  height: 50px; /* Set the height of the logo */
+  margin-right: 10px;
+  border-radius: 10%; /* Increase the border radius to make it circular */
+  overflow: hidden; /* Ensure the image is contained within the circular shape */
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.bottom-bar .logo img {
+  width: 100%; /* Make the image fill the logo container */
+  height: 100%; /* Make the image fill the logo container */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.bottom-bar .icons {
+  display: flex;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.bottom-bar .icons i {
+  background-color: black; /* Black box behind each icon */
+  /* padding: 3px; /* Space around the icon inside the box */
+  /* margin-right: 5px;  */
+  padding: 3px; /* Space around the icon inside the box */
+  margin-right: 10px;
+
+  /* margin-right: 25px; */
+  color: white;
+  font-size: 14px; /* Smaller icon size */
+  border-radius: 5px; /* Make the box circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px; /* Ensure the box is a circle */
+}
+
+.bottom-bar .nav-links a {
+  margin-left: 25px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.bottom-bar .nav-links a:hover {
+  color: #f66b61;
+}
+
+.bottom-bar .contact-button {
+  background-color: #f66b61;
+  padding: 10px 15px;
+  border-radius: 5px;
+  color: white;
+}
+
+.bottom-bar .contact-button:hover {
+  background-color: #e55c53;
+}
+
+/* Diamond and Metal Toggle Bar */
+.diamond-toggle-bar, .metal-toggle-bar {
+  position: absolute; /* Now absolute, so it can be dynamically positioned */
+  background-color: rgba(203, 201, 201, 0.6); /* Reduce opacity for translucency */
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  margin-bottom: 50px;
+}
+
+.diamond-toggle-bar.show, .metal-toggle-bar.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-10px); /* Smooth transition upwards */
+  background-color: rgba(203, 201, 201, 0.8); /* Slightly more opaque when visible */
+}
+
+
+.diamond-items, .metal-items {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.diamond-item, .metal-item {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.diamond-item:hover, .metal-item:hover {
+  transform: scale(1.1);
+}
+
+.close-toggle-bar {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-toggle-bar:hover {
+  color: #ff6666;
+}
+
